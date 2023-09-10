@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hMainDiv {
+  display: flex;
+}
+
+.leftDiv {
+  width: 25vw;
+  height: 99.2vh;
+}
+.rightDiv {
+  width: 75vw;
+  height: 99.2vh;
+}

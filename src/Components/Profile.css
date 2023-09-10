@@ -1,0 +1,38 @@
+.pDivCircle {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  text-align: "center";
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 50px;
+  padding-top: 17px;
+}
+
+.pDivH1 {
+  margin-top: 25px;
+}
+
+.pDivMain {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em; */
+  margin-top: 20px;
+  background-color: #f7ecdc;
+  padding-bottom: 25px;
+  height: 80px;
+  border-radius: 38px 0px 0px 38px;
+  margin-left: 8px;
+}
