@@ -1,25 +1,27 @@
 import React from "react";
 import "../Components/Profile.css";
 const Profile = (props) => {
+  console.log(props);
   return (
     <>
       {/* {props.title === props.selectedGroup ? ( */}
 
-      {props.backgroundColor.map((item, index) => (
-        <div className="pDivMain" key={index}>
+      {
+        <div className="pDivMain">
           <div
             className="pDivCircle"
             style={{
-              backgroundColor: item.color,
+              backgroundColor: props.title.color,
             }}
+            // key={index}
           >
-            {`${props.title[0]}${props.title[props.title.length - 1]}`}
+            {`${props.title.title[0]}${props.title.title[1]}`}
           </div>
           <div className="pDivH1">
-            <h1>{props.title}</h1>
+            <h1>{props.title.title}</h1>
           </div>
         </div>
-      ))}
+      }
 
       {/* ) : (
         <></>

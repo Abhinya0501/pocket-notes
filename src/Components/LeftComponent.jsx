@@ -8,12 +8,13 @@ import Profile from "./Profile";
 export default function LeftComponent() {
   const [backgroundColor, setBackgroundColor] = useState([]);
   const [colors, setColors] = useState("");
-  // const [selectedGroup, setSelectedGroup] = useState("");
+  const [selectedGroup, setSelectedGroup] = useState("");
   // Function to change the color when a button is clicked
 
   const [input, setInput] = useState("");
   const [inputset, setInputset] = useState([]);
   //   const { input, setInput } = useContext(MyContext);
+  console.log(inputset);
   return (
     <div className="lcMainDiv">
       <div className="lcH1">
@@ -29,26 +30,27 @@ export default function LeftComponent() {
           setBackgroundColor={setBackgroundColor}
           colors={colors}
           setColors={setColors}
-          // selectedGroup={selectedGroup}
-          // setSelectedGroup={setSelectedGroup}
+          selectedGroup={selectedGroup}
+          setSelectedGroup={setSelectedGroup}
         />
       </div>
       <div>
-        {inputset.map(
-          (input, index) => (
-            <Profile
-              title={input}
-              key={index}
-              backgroundColor={backgroundColor}
-              setBackgroundColor={setBackgroundColor}
-              colors={colors}
-              setColors={setColors}
-              // selectedGroup={selectedGroup}
-              // setSelectedGroup={setSelectedGroup}
-            />
-          )
-          // console.log(input)
-        )}
+        {inputset &&
+          inputset.map(
+            (input, index) => (
+              <Profile
+                title={input}
+                key={index}
+                backgroundColor={backgroundColor}
+                setBackgroundColor={setBackgroundColor}
+                colors={colors}
+                setColors={setColors}
+                // selectedGroup={selectedGroup}
+                // setSelectedGroup={setSelectedGroup}
+              />
+            )
+            // console.log(input)
+          )}
       </div>
     </div>
   );

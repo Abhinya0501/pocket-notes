@@ -3,8 +3,8 @@ import MyModal from "./ShowModal";
 import "../Components/Modal.css";
 
 const Modal = (props) => {
-  var input = "";
   const [showModal, setShowModal] = useState(false);
+  const [clr, setClr] = useState("");
   const closeModal = () => setShowModal(false);
   const handleChange = (e) => {
     props.setInput(e.target.value);
@@ -14,8 +14,21 @@ const Modal = (props) => {
     e.preventDefault();
     // input = props.input;
     // console.log(input);
-    props.setInputset([...props.inputset, props.input]);
+    // const found = props.inputset.find((element) => element === props.input);
+
+    // if (!found) {
+    //   props.setInputset([...props.inputset, props.input]);
+    // } else {
+    //   const array = props.inputset.filter((ele) => ele !== props.input);
+    //   props.setInputset(array);
+    // }
     // props.setSelectedGroup(props.input);
+    const val = {
+      color: clr,
+      title: props.input,
+    };
+    props.setInputset([...props.inputset, val]);
+
     closeModal();
   };
 
@@ -24,8 +37,18 @@ const Modal = (props) => {
       Create
     </button>
   );
-  const changeColor = (newColor) => {
+  const changeColor = (newColor, index) => {
     props.setBackgroundColor([...props.backgroundColor, { color: newColor }]);
+
+    // const found1 = props.backgroundColor.find((element) => element === props.input);
+
+    // if (!found1) {
+    //   props.setInputset([...props.inputset, props.input]);
+    // } else {
+    //   const array1 = props.inputset.filter((ele) => ele !== props.input);
+    //   props.setInputset(array1);
+    // }
+    setClr(newColor);
     console.log(props.backgroundColor);
   };
   const onclickhandle = () => {
@@ -42,7 +65,7 @@ const Modal = (props) => {
           <input
             type="text"
             placeholder="Enter your group name...."
-            name={input}
+            name={props.input}
             onChange={handleChange}
           />
         </div>
