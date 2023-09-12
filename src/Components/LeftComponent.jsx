@@ -2,56 +2,105 @@ import "../Components/LeftComponent.css";
 // import { useContext } from "react";
 // import { MyContext } from "../../src/MyContext";
 import Modal from "./Modal";
-import React, { useState } from "react";
+import React from "react";
 import Profile from "./Profile";
 
-export default function LeftComponent() {
-  const [backgroundColor, setBackgroundColor] = useState([]);
-  const [colors, setColors] = useState("");
-  const [selectedGroup, setSelectedGroup] = useState("");
-  // Function to change the color when a button is clicked
-
-  const [input, setInput] = useState("");
-  const [inputset, setInputset] = useState([]);
+export default function LeftComponent(props) {
   //   const { input, setInput } = useContext(MyContext);
-  console.log(inputset);
+
   return (
     <div className="lcMainDiv">
       <div className="lcH1">
         <h1>Pocket Notes</h1>
-      </div>
-      <div>
+
         <Modal
-          input={input}
-          setInput={setInput}
-          inputset={inputset}
-          setInputset={setInputset}
-          backgroundColor={backgroundColor}
-          setBackgroundColor={setBackgroundColor}
-          colors={colors}
-          setColors={setColors}
-          selectedGroup={selectedGroup}
-          setSelectedGroup={setSelectedGroup}
+          input={props.input}
+          setInput={props.setInput}
+          inputset={props.inputset}
+          setInputset={props.setInputset}
+          backgroundColor={props.backgroundColor}
+          setBackgroundColor={props.setBackgroundColor}
+          colors={props.colors}
+          setColors={props.setColors}
+          selectedGroup={props.selectedGroup}
+          setSelectedGroup={props.setSelectedGroup}
         />
       </div>
+
       <div>
-        {inputset &&
-          inputset.map(
-            (input, index) => (
-              <Profile
-                title={input}
-                key={index}
-                backgroundColor={backgroundColor}
-                setBackgroundColor={setBackgroundColor}
-                colors={colors}
-                setColors={setColors}
-                // selectedGroup={selectedGroup}
-                // setSelectedGroup={setSelectedGroup}
-              />
-            )
+        {/* {props.inputset &&
+          props.inputset.map(
+            (input, index) => ( */}
+        <div>
+          <Profile
+            title={props.input}
+            selectedGroup={props.selectedGroup}
+            setSelectedGroup={props.setSelectedGroup}
+            group={props.group}
+            setgroup={props.setGroup}
+            inputset={props.inputset}
+            setInputset={props.setInputset}
+          />
+        </div>
+        {/* )
             // console.log(input)
-          )}
+          )} */}
       </div>
     </div>
   );
 }
+
+// import React from "react";
+// import "../Components/LeftComponent.css";
+// import Modal from "./Modal";
+// import Profile from "./Profile";
+
+// export default function LeftComponent(props) {
+//   return (
+//     <div className="lcMainDiv">
+//       <div className="lcH1">
+//         <h1>Pocket Notes</h1>
+
+//         <Modal
+//           input={props.input}
+//           setInput={props.setInput}
+//           inputset={props.inputset}
+//           setInputset={props.setInputset}
+//           backgroundColor={props.backgroundColor}
+//           setBackgroundColor={props.setBackgroundColor}
+//           colors={props.colors}
+//           setColors={props.setColors}
+//           selectedGroup={props.selectedGroup}
+//           setSelectedGroup={props.setSelectedGroup}
+//         />
+//       </div>
+
+//       <div>
+//         {props.inputset &&
+//           [
+//             ...new Set(
+//               props.inputset.map((input) => `${input.title}-${input.color}`)
+//             ),
+//           ].map((compoundKey, index) => {
+//             // You can split compoundKey to extract title and color here
+//             const [title, color] = compoundKey.split("-");
+
+//             return (
+//               <div key={index}>
+//                 <Profile
+//                   title={title}
+//                   color={color}
+//                   selectedGroup={props.selectedGroup}
+//                   setSelectedGroup={props.setSelectedGroup}
+//                   group={props.group}
+//                   setgroup={props.setGroup}
+//                   inputset={props.inputset}
+//                   setInputset={props.setInputset}
+//                 />
+//               </div>
+//             );
+//           })}
+//       </div>
+//     </div>
+//   );
+// }

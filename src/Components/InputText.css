@@ -1,0 +1,46 @@
+.notesTextArea {
+  position: absolute;
+  width: 900px;
+  height: 180px;
+  top: 450px;
+  right: 55px;
+  border-radius: 9px;
+  border: 1px;
+}
+
+.notes {
+  background-color: #e8e8e8;
+  height: 99.2vh;
+  width: 75vw;
+}
+
+.notesBtn {
+  border-style: none;
+  position: absolute;
+  top: 565px;
+  right: 70px;
+  background-color: white;
+}
+
+textarea::placeholder {
+  width: 400px;
+  height: 35px;
+  top: 737px;
+  left: 498px;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #9a9a9a;
+  padding: 15px;
+}
+
+.notesUl {
+  width: 75vw;
+  height: 350px;
+  top: 144px;
+  left: 641px;
+  background-color: #f7ecdc;
+}

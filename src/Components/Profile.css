@@ -24,15 +24,33 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  /* font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em; */
   margin-top: 20px;
-  background-color: #f7ecdc;
   padding-bottom: 25px;
   height: 80px;
   border-radius: 38px 0px 0px 38px;
   margin-left: 8px;
 }
+
+/* .pInputText {
+  position: absolute;
+  width: 1014px;
+  height: 211px;
+  top: 500px;
+  left: 300px;
+  border-radius: 9px;
+  border: 1px;
+  /* z-index: 2; */
+
+/* .pDivGroup {
+  background-color: #f7ecdc;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-top: 20px;
+
+  padding-bottom: 25px;
+  height: 80px;
+  border-radius: 38px 0px 0px 38px;
+  margin-left: 8px;
+} */

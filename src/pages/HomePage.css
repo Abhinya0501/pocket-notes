@@ -9,9 +9,11 @@
 
 .leftDiv {
   width: 25vw;
-  height: 99.2vh;
+  /* height: 99.2vh; */
+  max-height: 99.2vh; /* Set the maximum height you desire */
+  overflow-y: auto; /* Add a vertical scrollbar when content overflows */
 }
 .rightDiv {
   width: 75vw;
-  height: 99.2vh;
+  max-height: 99.2vh; /* Set the maximum height you desire */
 }
