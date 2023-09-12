@@ -155,3 +155,64 @@
 .mmGnDiv1 {
   display: flex;
 }
+/* Add a media query for mobile screens */
+@media (max-width: 768px) {
+  .lcBtn {
+    margin-top: 15px; /* Reduce margin for mobile */
+  }
+
+  .lcBtn > button {
+    width: 200px; /* Adjust button width for mobile */
+    height: 35px; /* Adjust button height for mobile */
+    font-size: 20px; /* Adjust font size for mobile */
+  }
+
+  .mmH1div > h1 {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    width: auto; /* Allow width to adjust based on content */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 5px; /* Reduce margin for mobile readability */
+  }
+
+  .mmGnDiv1 > p,
+  .mmCcDiv1 > p {
+    font-size: 18px; /* Adjust font size for mobile */
+    line-height: 32px; /* Adjust line height for mobile */
+    padding: 10px 15px; /* Adjust padding for mobile */
+    margin-top: 5px; /* Reduce margin-top for mobile */
+  }
+
+  .color1,
+  .color2,
+  .color3,
+  .color4,
+  .color5,
+  .color6 {
+    width: 20px; /* Adjust color div width for mobile */
+    height: 20px; /* Adjust color div height for mobile */
+    margin-top: 10px; /* Adjust margin-top for mobile */
+    margin-right: 10px; /* Adjust margin-right for mobile */
+  }
+
+  .mmGnDiv1 > input {
+    width: 250px; /* Adjust input width for mobile */
+    height: 30px; /* Adjust input height for mobile */
+  }
+
+  .model-btn {
+    width: 120px; /* Adjust button width for mobile */
+    height: 25px; /* Adjust button height for mobile */
+    font-size: 18px; /* Adjust font size for mobile */
+    margin-left: 100px; /* Adjust margin-left for mobile */
+    margin-bottom: 10px; /* Adjust margin-bottom for mobile */
+    margin-top: 10px; /* Adjust margin-top for mobile */
+  }
+
+  .mmCcDiv1 {
+    flex-direction: column; /* Change to column layout for mobile */
+  }
+
+  .mmGnDiv1 {
+    flex-direction: column; /* Change to column layout for mobile */
+  }
+}

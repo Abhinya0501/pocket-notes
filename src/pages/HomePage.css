@@ -17,3 +17,17 @@
   width: 75vw;
   max-height: 99.2vh; /* Set the maximum height you desire */
 }
+
+@media (max-width: 768px) {
+  .hMainDiv {
+    flex-direction: column; /* Stack the left and right divs vertically on mobile */
+  }
+
+  .leftDiv {
+    width: 100%; /* Set the left div to 100% width on mobile */
+  }
+
+  .rightDiv {
+    width: 100%; /* Set the right div to 100% width on mobile */
+  }
+}

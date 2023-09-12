@@ -40,7 +40,7 @@ const InputText = (props) => {
   return (
     <div>
       <div className="notes">
-        <h2>Notes</h2>
+        {/* <h2>Notes</h2> */}
         <textarea
           className="notesTextArea"
           placeholder="Enter your text here..........."
@@ -53,8 +53,8 @@ const InputText = (props) => {
         <ul className="notesUl">
           {getNotesByGroup().map((note, index) => (
             <li key={index}>
-              <p>{note.content}</p>
-              <p>Created: {note.timestamp}</p>
+              <p className="noteTime">{note.timestamp}</p>
+              <p className="noteContent">{note.content}</p>
             </li>
           ))}
         </ul>

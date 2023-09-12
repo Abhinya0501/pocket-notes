@@ -39,8 +39,70 @@ textarea::placeholder {
 
 .notesUl {
   width: 75vw;
-  height: 350px;
-  top: 144px;
-  left: 641px;
+  height: 370px;
+
   background-color: #f7ecdc;
+
+  list-style: none;
+}
+.notesUl > li {
+  display: flex;
+  gap: 30px;
+  margin: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.notesUl > li > p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.035em;
+}
+.noteContent {
+  max-width: 60vw;
+
+  word-wrap: break-word;
+}
+.noteTime {
+  max-width: 10vw;
+}
+textarea {
+  font-size: 16px; /* Set the font size */
+  color: #333; /* Set the text color */
+  line-height: 1.5; /* Set the line height */
+  padding: 10px; /* Add padding to the text area */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Add rounded corners to the textarea */
+}
+
+/* Styles for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+  .notesTextArea {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    height: auto; /* Allow it to expand based on content */
+    top: auto; /* Remove absolute positioning */
+    right: auto;
+  }
+
+  .notes {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .notesBtn {
+    position: static; /* Remove absolute positioning */
+  }
+
+  textarea::placeholder {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    top: auto; /* Remove absolute positioning */
+    left: auto;
+    font-size: 18px; /* Adjust font size for readability */
+  }
+
+  .notesUl {
+    width: 100%; /* Full width for smaller screens */
+  }
 }

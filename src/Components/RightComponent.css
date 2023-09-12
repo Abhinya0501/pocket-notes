@@ -61,3 +61,20 @@
   width: 17.000003814697266px;
   height: 21.000001907348633px;
 }
+
+@media (max-width: 768px) {
+  .rcH1 > h1 {
+    font-size: 24px; /* Adjust font size for mobile */
+    line-height: 32px;
+  }
+
+  .rcPara1 > p {
+    font-size: 16px; /* Adjust font size for mobile */
+    line-height: 24px;
+  }
+
+  .rcFooter > p {
+    font-size: 16px; /* Adjust font size for mobile */
+    line-height: 24px;
+  }
+}

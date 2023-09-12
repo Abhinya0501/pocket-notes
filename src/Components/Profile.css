@@ -31,6 +31,25 @@
   margin-left: 8px;
 }
 
+@media (max-width: 768px) {
+  .pDivCircle {
+    width: 50px;
+    height: 50px;
+    font-size: 24px; /* Adjust font size for smaller screens */
+    margin-top: 20px; /* Adjust margin for spacing */
+    margin-left: 10px; /* Adjust margin for spacing */
+  }
+
+  .pDivH1 {
+    margin-top: 15px; /* Adjust margin for spacing */
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  .pDivMain {
+    height: 60px; /* Adjust height for smaller screens */
+    margin-left: 0; /* Remove left margin */
+  }
+}
 /* .pInputText {
   position: absolute;
   width: 1014px;
