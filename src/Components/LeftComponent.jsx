@@ -40,6 +40,10 @@ export default function LeftComponent(props) {
             setgroup={props.setGroup}
             inputset={props.inputset}
             setInputset={props.setInputset}
+            setSelectedGroupMap={props.setSelectedGroupMap}
+            selectedGroupMap={props.selectedGroup}
+            color={props.color}
+            setColor={props.setColor}
           />
         </div>
         {/* )

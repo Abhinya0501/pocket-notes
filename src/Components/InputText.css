@@ -17,9 +17,10 @@
 .notesBtn {
   border-style: none;
   position: absolute;
-  top: 565px;
+  top: 580px;
   right: 70px;
   background-color: white;
+  border-style: none;
 }
 
 textarea::placeholder {
@@ -39,7 +40,7 @@ textarea::placeholder {
 
 .notesUl {
   width: 75vw;
-  height: 370px;
+  height: 420px;
 
   background-color: #f7ecdc;
 
