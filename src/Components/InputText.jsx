@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "../Components/InputText.css";
 import Arrow from "../assets/arrow.png";
 const InputText = (props) => {
-  // Function to create a new note
   const createNote = () => {
     if (props.newNote.trim() === "") return;
 
@@ -12,30 +11,25 @@ const InputText = (props) => {
       timestamp: new Date().toLocaleString(),
     };
 
-    // Add the new note to the state
     const updatedNotes = [...props.notes, note];
     props.setNotes(updatedNotes);
 
-    // Save the updated notes to localStorage
     localStorage.setItem("notesData", JSON.stringify(updatedNotes));
 
-    // Clear the new note input field
     props.setNewNote("");
   };
 
-  // Function to get notes by group
   const getNotesByGroup = () => {
     return props.notes.filter((note) => note.group === props.selectedGroup);
   };
 
-  // Load notes data from local storage when the component mounts
   useEffect(() => {
     const storedData = localStorage.getItem("notesData");
     if (storedData) {
       const notesData = JSON.parse(storedData);
       props.setNotes(notesData);
     }
-  }, []); // The empty dependency array ensures this effect runs once when the component mounts
+  }, []);
 
   return (
     <div>

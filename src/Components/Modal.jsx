@@ -6,28 +6,24 @@ const Modal = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [clr, setClr] = useState("");
 
-  // Load user profile data from local storage when the component mounts
   useEffect(() => {
     const storedData = localStorage.getItem("userData");
     if (storedData) {
       try {
         const userData = JSON.parse(storedData);
         if (Array.isArray(userData.inputset)) {
-          // Ensure userData.inputset is an array
           props.setInputset(userData.inputset);
         } else {
-          // If not an array, set it to an empty array or handle it as needed
           props.setInputset([]);
         }
       } catch (error) {
         console.error("Error parsing userData from localStorage:", error);
-        props.setInputset([]); // Handle the error by setting inputset to an empty array
+        props.setInputset([]);
       }
     } else {
-      props.setInputset([]); // Handle the case where no data is found in localStorage
+      props.setInputset([]);
     }
   }, []);
-  // The empty dependency array ensures this effect runs once when the component mounts
 
   const closeModal = () => setShowModal(false);
   const handleChange = (e) => {
@@ -42,7 +38,6 @@ const Modal = (props) => {
       title: props.input,
     };
 
-    // Update the user profile data
     const updatedProfile = {
       ...props.profile,
       inputset: [...props.inputset, val],
@@ -50,7 +45,6 @@ const Modal = (props) => {
 
     props.setInputset(updatedProfile.inputset);
 
-    // Save the updated user profile data to local storage
     localStorage.setItem("userData", JSON.stringify(updatedProfile));
 
     closeModal();

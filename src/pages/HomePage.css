@@ -14,24 +14,24 @@
 .leftDiv {
   width: 25vw;
   /* height: 99.2vh; */
-  max-height: 99.2vh; /* Set the maximum height you desire */
-  overflow-y: auto; /* Add a vertical scrollbar when content overflows */
+  max-height: 99.2vh;
+  overflow-y: auto;
 }
 .rightDiv {
   width: 75vw;
-  max-height: 99.2vh; /* Set the maximum height you desire */
+  max-height: 99.2vh;
 }
 
 @media (max-width: 768px) {
   .hMainDiv {
-    flex-direction: column; /* Stack the left and right divs vertically on mobile */
+    flex-direction: column;
   }
 
   .leftDiv {
-    width: 100%; /* Set the left div to 100% width on mobile */
+    width: 100%;
   }
 
   .rightDiv {
-    width: 100%; /* Set the right div to 100% width on mobile */
+    width: 100%;
   }
 }

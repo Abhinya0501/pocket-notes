@@ -155,31 +155,32 @@
 .mmGnDiv1 {
   display: flex;
 }
-/* Add a media query for mobile screens */
+
 @media (max-width: 768px) {
   .lcBtn {
-    margin-top: 15px; /* Reduce margin for mobile */
+    margin-top: 15px;
   }
 
   .lcBtn > button {
-    width: 200px; /* Adjust button width for mobile */
-    height: 35px; /* Adjust button height for mobile */
-    font-size: 20px; /* Adjust font size for mobile */
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    align-items: center;
   }
 
   .mmH1div > h1 {
-    font-size: 1.2rem; /* Adjust font size for mobile */
-    width: auto; /* Allow width to adjust based on content */
-    height: auto; /* Allow height to adjust based on content */
-    margin: 5px; /* Reduce margin for mobile readability */
+    font-size: 1.2rem;
+    width: auto;
+    height: auto;
+    margin: 5px;
   }
 
   .mmGnDiv1 > p,
   .mmCcDiv1 > p {
-    font-size: 18px; /* Adjust font size for mobile */
-    line-height: 32px; /* Adjust line height for mobile */
-    padding: 10px 15px; /* Adjust padding for mobile */
-    margin-top: 5px; /* Reduce margin-top for mobile */
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px 7px;
+    margin-top: 20px;
   }
 
   .color1,
@@ -188,31 +189,37 @@
   .color4,
   .color5,
   .color6 {
-    width: 20px; /* Adjust color div width for mobile */
-    height: 20px; /* Adjust color div height for mobile */
-    margin-top: 10px; /* Adjust margin-top for mobile */
-    margin-right: 10px; /* Adjust margin-right for mobile */
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
   }
 
   .mmGnDiv1 > input {
-    width: 250px; /* Adjust input width for mobile */
-    height: 30px; /* Adjust input height for mobile */
+    width: 250px;
+    height: 30px;
   }
 
   .model-btn {
-    width: 120px; /* Adjust button width for mobile */
-    height: 25px; /* Adjust button height for mobile */
-    font-size: 18px; /* Adjust font size for mobile */
-    margin-left: 100px; /* Adjust margin-left for mobile */
-    margin-bottom: 10px; /* Adjust margin-bottom for mobile */
-    margin-top: 10px; /* Adjust margin-top for mobile */
+    width: 150px;
+    height: 25px;
+    font-size: 18px;
+    margin-left: 80px;
+    margin-bottom: 10px;
   }
 
   .mmCcDiv1 {
-    flex-direction: column; /* Change to column layout for mobile */
+    flex-direction: row;
+  }
+  .mmCcDiv1 > p {
+    flex-direction: row;
+    font-size: 16px;
   }
 
   .mmGnDiv1 {
-    flex-direction: column; /* Change to column layout for mobile */
+    flex-direction: column;
+  }
+  .mmMainDiv {
+    height: 20vh;
   }
 }

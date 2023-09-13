@@ -33,10 +33,8 @@ const Profile = (props) => {
     marginLeft: "8px",
   };
 
-  // Check if inputset is iterable before mapping
   if (!Array.isArray(inputset)) {
-    // Handle the case where inputset is not iterable
-    return <div>No inputset data available.</div>; // You can return null or any other fallback content
+    return <div>No inputset data available.</div>;
   }
   console.log(selectedGroupMap);
   return (
@@ -51,7 +49,7 @@ const Profile = (props) => {
             setSelectedGroup(input.title);
             setSelectedGroupMap(...selectedGroupMap, selectedGroup);
             props.setColor(input.color);
-          }} // Set selectedGroup when clicked
+          }}
         >
           <div
             className="pDivCircle"

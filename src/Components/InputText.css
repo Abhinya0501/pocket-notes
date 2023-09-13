@@ -9,9 +9,9 @@
 }
 
 .notes {
+  min-height: 100vh;
+  width: 100%;
   background-color: #e8e8e8;
-  height: 99.2vh;
-  width: 75vw;
 }
 
 .notesBtn {
@@ -69,30 +69,37 @@ textarea::placeholder {
   max-width: 10vw;
 }
 textarea {
-  font-size: 16px; /* Set the font size */
-  color: #333; /* Set the text color */
-  line-height: 1.5; /* Set the line height */
-  padding: 10px; /* Add padding to the text area */
-  border: 1px solid #ccc; /* Add a border */
-  border-radius: 4px; /* Add rounded corners to the textarea */
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-/* Styles for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
   .notesTextArea {
-    width: 100%; /* Full width for smaller screens */
-    max-width: 100%; /* Ensure it doesn't exceed the screen width */
-    height: auto; /* Allow it to expand based on content */
-    top: auto; /* Remove absolute positioning */
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    height: 20vh;
+    top: 530px;
     right: auto;
+    position: absolute;
+    border-style: none;
   }
 
   .notes {
-    width: 100%; /* Full width for smaller screens */
+    width: 100%;
+    background-color: #e8e8e8;
   }
 
   .notesBtn {
-    position: static; /* Remove absolute positioning */
+    position: absolute;
+    top: 650px;
+    right: 60px;
+    z-index: 2; /* Remove absolute positioning */
+    background-color: white;
   }
 
   textarea::placeholder {
@@ -104,6 +111,31 @@ textarea {
   }
 
   .notesUl {
-    width: 100%; /* Full width for smaller screens */
+    width: 100%;
+    position: absolute;
+    top: 66px;
+    height: 55vh; /* Full width for smaller screens */
+  }
+  .notesUl > li {
+    display: flex;
+    gap: 50px;
+    margin: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .notesUl > li > p {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 18px;
+    letter-spacing: 0.0035em;
+  }
+  .noteContent {
+    max-width: 40vw;
+
+    word-wrap: break-word;
+  }
+  .noteTime {
+    max-width: 20vw;
   }
 }

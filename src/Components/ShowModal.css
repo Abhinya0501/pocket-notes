@@ -31,10 +31,10 @@
 
 @media (max-width: 768px) {
   .container {
-    margin: 1rem; /* Further reduce margin for smaller screens */
+    margin: 1rem;
   }
 
   .modal-container {
-    max-width: 90%; /* Reduce modal width for mobile */
+    max-width: 90%;
   }
 }

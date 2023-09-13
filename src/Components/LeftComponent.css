@@ -5,9 +5,11 @@
 }
 @media (max-width: 768px) {
   .lcH1 > h1 {
-    width: auto; /* Allow the width to adjust based on content */
-    height: auto; /* Allow the height to adjust based on content */
-    margin: 5px; /* Reduce the margin for mobile readability */
-    font-size: 24px; /* Adjust the font size for mobile */
+    width: auto;
+    height: auto;
+    margin: 20px;
+    font-size: 24px;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }
